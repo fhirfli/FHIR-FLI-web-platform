@@ -1,0 +1,126 @@
+<link rel="stylesheet" href="/chartjs/css/normalize.css">
+<link rel="stylesheet" href="/chartjs/css/main.css">
+<script src="/chartjs/js/vendor/modernizr-2.8.3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">Gym Sessions</h4>
+                                    <!-- Trigger the modal with a button -->
+                                    <button type="button" class="btn btn-info btn-sm pull-right" data-toggle="modal" data-target="#myModalGym">Set Gym attendance goals</button>
+                                <p class="category">Gym Attendance By Week</p>
+                            </div>
+                            <div class="content">
+                                <canvas id="gymByMonth"></canvas>
+                                <script src="/chartjs/js/gymByMonth.js"></script>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">Steps</h4>
+                                <button type="button" class="btn btn-info btn-sm pull-right" data-toggle="modal" data-target="#myModalSteps">Set Steps goals</button>
+                                <p class="category">Number of Steps today</p>
+                            </div>
+                            <div class="content">
+                                <canvas id="steps24" height="335"></canvas>
+                                <script src="/chartjs/js/steps24.js"></script>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">Gym Visits</h4>
+                                <p class="category">by time of the day</p>
+                            </div>
+                            <div class="content">
+                                <canvas id="gymDist"></canvas>
+                                <script src="/chartjs/js/gymDist.js"></script>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">Steps</h4>
+                                <p class="category">by time of the day</p>
+                            </div>
+                            <div class="content">
+                                <canvas id="stepDist"></canvas>
+                                <script src="/chartjs/js/stepDist.js"></script>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">Upcoming Class Bookings</h4>
+                                <p class="category" id="classCategory">Nothing To Display</p>
+                            </div>
+                            <div class="content">
+                              <div class="row" id="classBookings">
+                            </div>
+                            <script src="/js/bookings.js"></script>
+                        </div>
+                    </div>
+                    <!-- <div class="col-md-8">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title"></h4>
+                                <button type="button" class="btn btn-info btn-sm pull-right" data-toggle="modal" data-target="#myModalSteps">Set Steps goals</button>
+                                <p class="category">Number of Steps in the last 24 hours</p>
+                            </div>
+                            <div class="content">
+                                <canvas id="polar" height="335"></canvas>
+                                <script src="/chartjs/js/polar.js"></script>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+          </div>
+
+        <footer class="footer">
+            <div class="container-fluid">
+                <nav class="pull-left">
+                    <ul>
+                        <li>
+                            <a href="https://www.nuffieldhealth.com/" target="_blank">
+                                Nuffield Health Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.nuffieldhealth.com/article" target="_blank">
+                               Health & Fitness Articles
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+
+    </div>
+
+</div>
+	<script type="text/javascript">
+    	$(document).ready(function(){
+
+        	demo.initChartist();
+
+        	$.notify({
+            	icon: 'pe-7s-gift',
+            	message: "Welcome <%= user.facebook.name %>!"
+
+            },{
+                type: 'info',
+                timer: 4000
+            });
+
+    	});
+	</script>

@@ -1,0 +1,127 @@
+<link rel="stylesheet" href="/chartjs/css/normalize.css">
+<link rel="stylesheet" href="/chartjs/css/main.css">
+<script src="/js/dataSharing.js"></script>
+
+        <div class="content">
+          <form name='data'>
+          <div class="card">
+            <div class="content">
+              <h4 class="title">Choose Data Sources</h4>
+              <hr>
+              <div class="row">
+                  <div class="col-sm-3">
+                      <div class="form-group">
+                          <img src="/img/logos/Nuffield.jpg" style="max-height:80px; margin-bottom:10px">
+                          <label>Nuffield Health</label>
+                          <button type = 'button'class="btn btn-info" style="width:60%" onclick="window.location.assign('http://localhost:3000/login?redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Fauth%2Fnuffield%2Fcallback&state=123&client_id=123')">Connect</button>
+                          <p class="btn btn-info" style="width:60%; cursor:default">
+                          <% if (user.publishers.nuffield) { %>
+                              Connected
+                          <% } else { %>
+                              Not Connected
+                          <% } %>
+                          </p>
+                      </div>
+                  </div>
+                  <div class="col-sm-3">
+                      <div class="form-group">
+                          <img src="/img/logos/googleFIT.png" style="max-height:80px; margin-bottom:10px">
+                          <label>Google Fit</label><br>
+                          <button type = 'button'class="btn btn-info" style="width:60%" onclick="window.open('/source/google-fit')">Connect</button>
+                      </div>
+                  </div>
+                  <div class="col-sm-3">
+                      <div class="form-group">
+                          <img src="/img/logos/HealthKit.png" style="max-height:80px; margin-bottom:10px">
+                          <label>HealthKit</label><br>
+                          <p class="btn btn-info" style="width:60%; cursor:default">
+                          <% if (user.publishers.healthKit) { %>
+                              Connected
+                          <% } else { %>
+                              Not Connected
+                          <% } %>
+                          </p>
+                      </div>
+                  </div>
+                  <div class="col-sm-3">
+                      <div class="form-group">
+                          <img src="/img/logos/fitbit-logo.png" style="max-height:80px; margin-bottom:10px">
+                          <label>Fitbit</label><br>
+                          <button type = 'button'class="btn btn-info" style="width:60%" onclick="window.open('/auth/fitbit')">Connect</button>
+                      </div>
+                      </div>
+                      </div>
+
+
+            </div>
+          </div>
+          <div class="card">
+            <div class="content">
+              <h4 class="title">Share Data With</h4>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <label class="checkbox <% if (user.subscribers.openMRS) { %> checked <% } %>">
+                    <div style="position:relative; left:-35px; top: -3px">
+                    <img src="/img/logos/openMRS.png" style="max-width:80px">
+                    <b>Open MRS</b>
+                    </div>
+                    <input id="openMRS" type="checkbox" name="openMRS" value="openMRS" data-toggle="checkbox"  <% if (user.subscribers.openMRS) { %> checked <% } %> >
+                  </label>
+                </div>
+                <div class="col-sm-3">
+                  <label class="checkbox <% if (user.subscribers.msHealth) { %> checked <% } %>">
+                    <div style="position:relative; left:-35px; top: -3px">
+                    <img src="/img/logos/MSHealth.png" style="max-width:80px">
+                    <b>Microsoft Heatlh</b>
+                    </div>
+                    <input id="msHealth" type="checkbox" name="msHealth" value="msHealth" data-toggle="checkbox" <% if (user.subscribers.msHealth) { %> checked <% } %> >
+                  </label>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-12 col-md-6 c">
+              <div class="card">
+                <div class="content">
+                  <h4 class="title">Start Date</h4>
+                  <div class="form-group">
+                    <label>Recommended: Start of Nuffield Subscription</label>
+                    <input type="date" class="form-control" name="startDate" style="width:60%" <% if (user.publishers.startDate) {%>value="<%= user.publishers.startDate.getFullYear() %>-<% if (user.publishers.startDate.getMonth() < 9) { %>0<% } %><%= user.publishers.startDate.getMonth()+1 %>-<% if (user.publishers.startDate.getDate() < 10) { %>0<% } %><%= user.publishers.startDate.getDate() %>"<% } %>>
+                  </div>
+                </div>
+              </div>
+            </form>
+            </div>
+            <div class="col-xs-12 col-md-6 text-right">
+                <button type = 'button' class="btn btn-info" onclick="updateData()">Save</button>
+            </div>
+          </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container-fluid">
+                <nav class="pull-left">
+                    <ul>
+                        <li>
+                            <a href="https://www.nuffieldhealth.com/" target="_blank">
+                                Nuffield Health Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.nuffieldhealth.com/article" target="_blank">
+                               Health & Fitness Articles
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+
+    </div>
+
+</div>

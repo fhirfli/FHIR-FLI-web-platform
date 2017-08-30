@@ -1,0 +1,313 @@
+
+                 <style>
+                     #map {
+                       position: absolute;
+                       bottom: 0px;
+                       width: 100%;
+                     }
+                </style>
+             <div id="map"></div>
+             <script>
+
+
+             function initMap() {
+
+
+              var london =         {lat: 51.509865, lng: -0.118092 };
+              var city =           {lat: 51.511,    lng: -0.0905   };
+              var moorgate =       {lat: 51.5194,   lng: -0.0896   };
+              var shoreditch =     {lat: 51.5255,   lng: -0.0795   };
+              var covent =         {lat: 51.5139,   lng: -0.1239   };
+              var islington =      {lat: 51.5369,   lng: -0.102    };
+              var bloomsbury =     {lat: 51.5242,   lng: -0.1183   };
+              var paddington =     {lat: 51.5192,   lng: -0.1803   };
+              var fulham =         {lat: 51.4772,   lng: -0.2222   };
+              var ealing =         {lat: 51.5128,   lng:  -0.303   };
+              var brondesbury =    {lat: 51.5438,   lng: -0.2223   };
+
+              var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 12,
+                center: london,
+              });
+
+
+              var marker2 = new google.maps.Marker({
+                position: city,
+                icon: 'img/nuffmark.png',
+                map: map
+              });
+              marker2.addListener('click', function() {
+                infowindow1.open(map, marker2);
+              });
+              var marker3 = new google.maps.Marker({
+                position: moorgate,
+                icon: 'img/nuffmark.png',
+                map: map
+              });
+              marker3.addListener('click', function() {
+                infowindow2.open(map, marker3);
+              });
+              var marker4 = new google.maps.Marker({
+                position: shoreditch,
+                icon: 'img/nuffmark.png',
+                map: map
+              });
+              marker4.addListener('click', function() {
+                infowindow3.open(map, marker4);
+              });
+              var marker5 = new google.maps.Marker({
+                position: covent,
+                icon: 'img/nuffmark.png',
+                map: map
+              });
+              marker5.addListener('click', function() {
+                infowindow4.open(map, marker5);
+              });
+              var marker6 = new google.maps.Marker({
+                position: islington,
+                icon: 'img/nuffmark.png',
+                map: map
+              });
+              marker6.addListener('click', function() {
+                infowindow5.open(map, marker6);
+              });
+              var marker7 = new google.maps.Marker({
+                position: bloomsbury,
+                icon: 'img/nuffmark.png',
+                map: map
+              });
+              marker7.addListener('click', function() {
+                infowindow6.open(map, marker7);
+              });
+              var marker8 = new google.maps.Marker({
+                position: paddington,
+                icon: 'img/nuffmark.png',
+                map: map
+              });
+              marker8.addListener('click', function() {
+                infowindow7.open(map, marker8);
+              });
+              var marker9 = new google.maps.Marker({
+                position: fulham,
+                icon: 'img/nuffmark.png',
+                map: map
+              });
+              marker9.addListener('click', function() {
+                infowindow8.open(map, marker9);
+              });
+              var marker10 = new google.maps.Marker({
+                position: ealing,
+                icon: 'img/nuffmark.png',
+                map: map
+              });
+              marker10.addListener('click', function() {
+                infowindow9.open(map, marker10);
+              });
+              var marker11 = new google.maps.Marker({
+                position: brondesbury,
+                icon: 'img/nuffmark.png',
+                map: map
+              });
+              marker11.addListener('click', function() {
+                infowindow10.open(map, marker11);
+              });
+
+
+
+
+              var contentString = '<div id="content">'+
+                   '<div id="siteNotice">'+
+                   '</div>'+
+                   '<h2 id="firstHeading" class="firstHeading">City Fitness & Wellbeing Gym</h2>'+
+                   '<div id="bodyContent">'+
+                   '<p><b>City Gym, our flagship gym. Over 7000 square feet.</b></p>' +
+                   '<li>A digital spin studio</li> '+
+                   '<li>2 swimming pools</li> '+
+                   '<li>Squash courts</li> '+
+                   '<li>Physiotherapy</li> '+
+                   '<li>Personal trainers</li> '+
+                   '<li>GP clinic</li> '+
+                   '<li>Over 140 weekly classes including Pilates, Yoga, Zumba, Bodyattack and Bodypump</li> '+
+                   '<li>Free towels for members</li> '+
+                   '<p><a href="https://www.nuffieldhealth.com/gyms/city" target="_blank">Learn more</a></p>'
+                   '</div>'+
+                   '</div>';
+                var infowindow1 = new google.maps.InfoWindow({
+                    content: contentString
+                });
+
+
+              var contentString2 = '<div id="content">'+
+                   '<div id="siteNotice">'+
+                   '</div>'+
+                   '<h2 id="firstHeading" class="firstHeading">Moorgate Fitness & Wellbeing Gym</h2>'+
+                   '<div id="bodyContent">'+
+                   '<p><b>Moorgate Gym, Our recently-refurbished gym</b></p>' +
+                   '<li>20m swimming pool</li> '+
+                   '<li>Beauty spa</li> '+
+                   '<li>Squash courts</li> '+
+                   '<li>Physiotherapy</li> '+
+                   '<li>Golf performance studio</li> '+
+                   '<li>Over 50 weekly classes</li> '+
+                   '<li>Free towel for members</li> '+
+                   '<p><a href="https://www.nuffieldhealth.com/gyms/moorgate" target="_blank">Learn more</a></p>'
+                   '</div>'+
+                   '</div>';
+                   var infowindow2 = new google.maps.InfoWindow({
+                    content: contentString2
+                });
+
+              var contentString3 = '<div id="content">'+
+                   '<div id="siteNotice">'+
+                   '</div>'+
+                   '<h2 id="firstHeading" class="firstHeading">Shoreditch Fitness & Wellbeing Gym</h2>'+
+                   '<div id="bodyContent">'+
+                   '<p><b>Situated in the heart of trendy Shoreditch</b></p>' +
+                   '<li>25m swimming pool</li> '+
+                   '<li>Sauna/steam room</li> '+
+                   '<li>Squash courts</li> '+
+                   '<li>Physiotherapy</li> '+
+                   '<li>Over 60 weekly classes</li> '+
+                   '<li>Free towel for members</li> '+
+                   '<p><a href="https://www.nuffieldhealth.com/gyms/shoreditch" target="_blank">Learn more</a></p>'
+                   '</div>'+
+                   '</div>';
+                   var infowindow3 = new google.maps.InfoWindow({
+                    content: contentString3
+                });
+
+              var contentString4 = '<div id="content">'+
+                   '<div id="siteNotice">'+
+                   '</div>'+
+                   '<h2 id="firstHeading" class="firstHeading">Covent Garden Fitness & Wellbeing Gym</h2>'+
+                   '<div id="bodyContent">'+
+                   '<p><b>Located in the heart of central London</b></p>' +
+                   '<li>20m swimming pool</li> '+
+                   '<li>Relaxation Spa</li> '+
+                   '<li>Sauna/steam room</li> '+
+                   '<li>Physiotherapy</li> '+
+                   '<li>Over 60 weekly classes</li> '+
+                   '<li>Nutritional therapist</li>' +
+                   '<li>Free towel for members</li> '+
+                   '<p><a href="https://www.nuffieldhealth.com/gyms/covent-garden" target="_blank">Learn more</a></p>'
+                   '</div>'+
+                   '</div>';
+                   var infowindow4 = new google.maps.InfoWindow({
+                    content: contentString4
+                });
+                   var contentString5 = '<div id="content">'+
+                   '<div id="siteNotice">'+
+                   '</div>'+
+                   '<h2 id="firstHeading" class="firstHeading">Islington Fitness & Wellbeing Gym</h2>'+
+                   '<div id="bodyContent">'+
+                   '<p><b>Fully kitted out with the latest equipment</b></p>' +
+                   '<li>20m swimming pool</li> '+
+                   '<li>Personal trainers</li> '+
+                   '<li>swimming lessons</li> '+
+                   '<li>Sauna/steam room</li> '+
+                   '<li>Free towel for members</li> '+
+                   '<p><a href="https://www.nuffieldhealth.com/gyms/islington" target="_blank">Learn more</a></p>'
+                   '</div>'+
+                   '</div>';
+                   var infowindow5 = new google.maps.InfoWindow({
+                    content: contentString5
+                });
+                   var contentString6 = '<div id="content">'+
+                   '<div id="siteNotice">'+
+                   '</div>'+
+                   '<h2 id="firstHeading" class="firstHeading">Bloomsbury Fitness & Wellbeing Gym</h2>'+
+                   '<div id="bodyContent">'+
+                   '<p><b>Just a short walk from Russell Square</b></p>' +
+                   '<li>19m swimming pool</li> '+
+                   '<li>Squash courts</li> '+
+                   '<li>Spa pool</li> '+
+                   '<li>Beauty spa</li> '+
+                   '<li>Physiotherapy</li> '+
+                   '<li>Over 60 weekly classes</li> '+
+                   '<li>Free towel for members</li> '+
+                   '<p><a href="https://www.nuffieldhealth.com/gyms/Bloomsbury" target="_blank">Learn more</a></p>'
+                   '</div>'+
+                   '</div>';
+                   var infowindow6 = new google.maps.InfoWindow({
+                    content: contentString6
+                });
+                   var contentString7 = '<div id="content">'+
+                   '<div id="siteNotice">'+
+                   '</div>'+
+                   '<h2 id="firstHeading" class="firstHeading">Paddington Fitness & Wellbeing Gym</h2>'+
+                   '<div id="bodyContent">'+
+                   '<p><b>Located just 200 metres from the station</b></p>' +
+                   '<li>20m swimming pool</li> '+
+                   '<li>Onsite health clinic</li> '+
+                   '<li>Personal trainers</li> '+
+                   '<li>Sauna/steam room</li> '+
+                   '<li>Physiotherapy</li> '+
+                   '<li>Over 90 weekly classes</li> '+
+                   '<li>Free towel for members</li> '+
+                   '<p><a href="https://www.nuffieldhealth.com/gyms/Paddington" target="_blank">Learn more</a></p>'
+                   '</div>'+
+                   '</div>';
+                   var infowindow7 = new google.maps.InfoWindow({
+                    content: contentString7
+                });
+                     var contentString8 = '<div id="content">'+
+                   '<div id="siteNotice">'+
+                   '</div>'+
+                   '<h2 id="firstHeading" class="firstHeading">Fulham Fitness & Wellbeing Gym</h2>'+
+                   '<div id="bodyContent">'+
+                   '<p><b>Family-friendly gym is located right by the River Thames near Bishop’s Park</b></p>' +
+                   '<li>20m swimming pool</li> '+
+                   '<li>Kids classes/activities</li> '+
+                   '<li>Swimming lessons</li> '+
+                   '<li>Personal trainers</li> '+
+                   '<li>Spin studio</li> '+
+                   '<li>Physiotherapy</li> '+
+                   '<li>Over 50 weekly classes</li> '+
+                   '<p><a href="https://www.nuffieldhealth.com/gyms/Fulham" target="_blank">Learn more</a></p>'
+                   '</div>'+
+                   '</div>';
+                   var infowindow8 = new google.maps.InfoWindow({
+                    content: contentString8
+                });
+                   var contentString9 = '<div id="content">'+
+                   '<div id="siteNotice">'+
+                   '</div>'+
+                   '<h2 id="firstHeading" class="firstHeading">Ealing Fitness & Wellbeing Gym</h2>'+
+                   '<div id="bodyContent">'+
+                   '<p><b>Conveniently located in Ealing Broadway Shopping Centre</b></p>' +
+                   '<li>20m swimming pool</li> '+
+                   '<li>Personal trainers</li> '+
+                   '<li>Extensive and modern gym floor</li> '+
+                   '<p><a href="https://www.nuffieldhealth.com/gyms/Ealing" target="_blank">Learn more</a></p>'
+                   '</div>'+
+                   '</div>';
+                   var infowindow9 = new google.maps.InfoWindow({
+                    content: contentString9
+                });
+                   var contentString10 = '<div id="content">'+
+                   '<div id="siteNotice">'+
+                   '</div>'+
+                   '<h2 id="firstHeading" class="firstHeading">Brondesbury Park Fitness & Wellbeing Gym</h2>'+
+                   '<div id="bodyContent">'+
+                   '<p><b>A few minutes walk from Willesden Green station and also offer free on-site parking</b></p>' +
+                   '<li>20m swimming pool</li> '+
+                   '<li>Personal trainers</li> '+
+                   '<li>Nutritional therapist</li> '+
+                   '<li>Children day nursery</li> '+
+                   '<li>Physiotherapy</li> '+
+                   '<li>Beauty Spa</li> '+
+                   '<li>Sauna/steam room</li> '+
+                   '<li>Over 90 weekly class</li> '+
+                   '<li>Free towel for members</li> '+
+                   '<p><a href="https://www.nuffieldhealth.com/gyms/Brondesbury-park" target="_blank">Learn more</a></p>'
+                   '</div>'+
+                   '</div>';
+                   var infowindow10 = new google.maps.InfoWindow({
+                    content: contentString10
+                });
+              }
+
+          </script>
+          <script async defer
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwB92GdPkK2xzSF7pl8AZidKRPlYXVY_g&callback=initMap">
+          </script>
