@@ -1,0 +1,40 @@
+body{
+  padding-top:80px;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v10/zhcz-_WihjSQC0oHJ9TCYAzyDMXhdD8sAj6OAJTFsBI.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+.mtsrt {
+  font-family: "Montserrat";
+  color: white;
+}
+
+.videoholder {
+  position: fixed;
+  z-index: -50;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+}
+
+.white-url {
+  color: #DDD;
+  font-size: 3vh;
+}
+
+.white-url:hover{
+  color: #9368E9;
+}
+
+.titleHolder {
+  width: 100vw;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+}

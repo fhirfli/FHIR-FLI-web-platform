@@ -1,0 +1,28 @@
+#notificationNum {
+  position: relative;
+  left:5px;
+  top: -5px;
+  color: white;
+  background-color: red;
+  border-radius: 7px;
+  font-size: 10px;
+  line-height: 10px;
+  width: 14px;
+  height: 14px;
+  padding: 3px;
+  text-align: center;
+  float: left;
+  display: inline;
+}
+
+#notificationList{
+  top: 65px;
+  left: 1vw;
+  min-width: 40vw;
+  max-width: 98vw;
+
+}
+
+#notificationList li a {
+  white-space: normal;
+}
